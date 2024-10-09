@@ -1,7 +1,9 @@
-// Setup
+/*
+    SETUP
+*/
 var express = require('express');
 var app = express();
-var PORT = 12002;
+var PORT = 2002;
 
 app.use('./style.css', (req, res, next) => { 
     res.type('text/css');  // Ensure response has correct content type for stylesheet
@@ -23,7 +25,9 @@ app.set('view engine', '.hbs');                 // Tell express to use the handl
 
 var db = require('./database/db-connector')
 
-// Routes
+/*
+    ROUTES
+*/
 // GET route for Homepage
 app.get('/', function(req, res)
     {  
@@ -517,7 +521,9 @@ app.put('/put-trainer-ajax', express.json(), function(req,res,next){
         })
     });
 
-// LISTENER
+/*
+    LISTENER
+*/
 app.listen(PORT, function(){
     console.log('Express started on http://localhost:' + PORT + '; press Ctrl-C to terminate.')
 });
