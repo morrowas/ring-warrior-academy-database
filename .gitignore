@@ -1,0 +1,5 @@
+/node_modules
+./database/db-connector.js
+./database/bsg_db.sql
+scratch.hbs
+/.vscode
